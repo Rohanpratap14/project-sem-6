@@ -1,0 +1,652 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1c1c1c;
+  }
+
+/* css coding for header section */
+:root {
+  --navbar-height: 49px;
+}
+
+/* Navigation Bar */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0px;
+}
+
+/* Navigation Bar: logo and img  */
+#logo {
+  margin: 16px 20px;
+}
+
+#logo img {
+  height: 77px;
+  width: 120px;
+  margin: 4px 4px;
+}
+
+/* Navigation Bar: Unordered list */
+#navbar ul {
+  display: flex;
+  font-family: 'Sono', sans-serif;
+
+}
+
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* elements of unorderd list  */
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1.01rem;
+  padding: 3px 48px;
+} 
+
+
+/* this separate a is written for including the hover function */
+
+#navbar ul li a {
+  padding: 12px 5px;
+  text-decoration: none;
+  color: #fff;
+}
+#navbar ul li a:hover {
+  color: black;
+  background-color: white;
+} 
+
+
+
+#navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 17px;
+  font-size: 16px;
+}
+
+#navbar .searchBar{
+  width: 26%;
+  height: 27px;
+  border: var(--border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 131px;
+}
+
+
+#navbar .searchBar input{
+  font-size: 17px;
+  padding: 14px 13px;
+  height: 110%;
+  width: 107%;
+  text-transform: none;
+  color: var(--black);
+}
+#navbar .searchBar input label{
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+#navbar .navItem  i{
+  color: black;
+}
+
+
+.search-item input{
+  margin-left: auto;
+  color: black;
+  background-color: #fff;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 127px;
+  top: -19px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  background-color: transparent;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.fa-search:before {
+  content: "\f002";
+  position: relative;
+  left: -42px;
+  top: 5px;
+}
+
+/* for type of book */
+
+  .bookContainer {
+      display: flex;
+      flex-direction: row;
+      /* border: 2px solid red; */
+      margin: 22px 131px;
+      border-color: rgb(65, 65, 65);
+      justify-content: center;
+      position: relative;
+      top: 12px;
+  }
+
+.typeBook a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 5px;
+  margin: 2px 34px;
+  margin-top: 10px;
+
+}
+
+/* .heading h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 21px 3px;
+
+} */
+
+.bookContainer ul a:hover{
+  background-color: gray;
+  color: white;
+  border: gray;
+  border-radius: 2px ;
+}
+
+.navbar-icons {
+  position: absolute;
+  top: 27px;
+  right: 15px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  
+  }
+
+  .navbar-icons a i{
+      color: #fff;
+      padding: 8px 11px;
+      font-size: 23px;
+  }
+
+/* end of header section */
+
+
+
+  .arrivals{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+  .arrivals h2{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    border-bottom: 2px dotted #fff;
+    margin: 35px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+  }
+  
+  .arrivals .arrivals-box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .arrivals .arrivals-box .arrivals-card{
+    width: 250px;
+    height: 420px;
+    text-align: center;
+    padding: 5px;;
+    margin: 10px 20px;
+  }
+  .arrivals .arrivals-box .arrivals-card:hover{
+    box-shadow: 0 0 5px #80800808;
+  }
+  .arrivals .arrivals-box .arrivals-card .arrivals-img{
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  
+  .arrivals .arrivals-box .arrivals-card .arrivals-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+  }
+  .arrivals .arrivals-box .arrivals-card:hover .arrivals-img img{
+    font-size: 20px;
+    margin: 8px 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  }
+  
+  .arrivals .arrivals-box .arrivals-card .arrivals-tag p{
+    font-size: 15px;
+    margin: 8px 0;
+    color: #fff;
+  }
+  
+  .arrivals .arrivals-box .arrivals-card .arrivals-tag .arrivals-icon{
+   color: goldenrod;
+    margin-bottom: 15px;
+  }
+  .arrivals .arrivals-box .arrivals-card .arrivals-tag .arrivals-btn{
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    text-decoration: none;
+   border-radius: 10px;
+  }
+  .arrivals .arrivals-box .arrivals-card .arrivals-tag .arrivals-btn:hover{
+    color: #fff;
+    background-color: #089d08;
+  }
+  
+  
+  
+  
+  /* responsive */
+  @media(max-width:1280px){
+    .arrivals .arrivals-box{
+      width: 90%;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media(max-width:990px){
+    .arrivals .arrivals-box{
+      width: 85%;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media(max-width:720px){
+    .arrivals .arrivals-box{
+      width: 85%;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* fiction code for css */
+
+
+  .fiction{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 35px;
+  }
+  .fiction h2{
+    text-align: right;
+    font-size: 30px;
+    color: #fff;
+    border-bottom: 2px dashed #fff;
+    margin: 35px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .fiction .fiction-box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+ .fiction .fiction-box .fiction-card{
+    width: 250px;
+    height: 420px;
+    text-align: center;
+    padding: 5px;
+    margin: 10px 20px;
+  }
+
+  .fiction .fiction-box .fiction-card:hover{
+    box-shadow: 0 0 5px #80800808;
+  }
+  
+  .fiction .fiction-box .fiction-card .fiction-img{
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  
+  .fiction .fiction-box .fiction-card .fiction-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+  }
+
+  .fiction .fiction-box .fiction-card:hover .fiction-img img{
+    font-size: 20px;
+    margin: 8px 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  }
+  
+  .fiction .fiction-box .fiction-card .fiction-tag p{
+    font-size: 15px;
+    margin: 8px 0;
+    color: #fff;
+  }
+
+  .fiction .fiction-box .fiction-card .fiction-tag .fiction-icon{
+   color: goldenrod;
+    margin-bottom: 15px;
+  }
+  .fiction .fiction-box .fiction-card .fiction-tag .fiction-btn{
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    text-decoration: none;
+   border-radius: 10px;
+  }
+  .fiction .fiction-box .fiction-card .fiction-tag .fiction-btn:hover{
+    color: #fff;
+    background-color: #089d08;
+  }
+
+  /* responsive fiction */
+
+
+  @media(max-width:1280px){
+    .fiction-box{
+      width: 90%;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media(max-width:990px){
+    .fiction .fiction-box{
+      width: 85%;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media(max-width:720px){
+    .fiction .fiction-box{
+      width: 85%;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  .fiction h2{
+    text-align: left;
+    font-size: 30px;
+    margin: 35px;
+    margin-left: 20px;
+  }
+
+
+  /* religious ansd spritual */
+
+
+  .religion{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 35px;
+  }
+  .religion h2{
+    text-align: left;
+    font-size: 30px;
+    color: #fff;
+    border-bottom: 2px dotted #fff;
+    margin: 35px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .religion .religion-box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .religion .religion-box .religion-card{
+    width: 250px;
+    height: 420px;
+    text-align: center;
+    padding: 5px;;
+    margin: 10px 20px;
+  }
+  .religion .religion-box .religion-card:hover{
+    box-shadow: 0 0 5px #80800808;
+  }
+  .religion .religion-box .religion-card .religion-img{
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  
+  .religion .religion-box .religion-card .religion-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+  }
+  .religion .religion-box .religion-card:hover .religion-img img{
+    font-size: 20px;
+    margin: 8px 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  }
+  
+  .religion .religion-box .religion-card .religion-tag p{
+    font-size: 15px;
+    margin: 8px 0;
+    color: #fff;
+  }
+  
+  .religion .religion-box .religion-card .religion-tag .religion-icon{
+   color: goldenrod;
+    margin-bottom: 15px;
+  }
+  .religion .religion-box .religion-card .religion-tag .religion-btn{
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    text-decoration: none;
+   border-radius: 10px;
+  }
+  .religion .religion-box .religion-card .religion-tag .religion-btn:hover{
+    color: #fff;
+    background-color: #089d08;
+  }
+
+
+  /* responsive religion page css */
+
+  @media(max-width:1280px){
+    .religion-box{
+      width: 90%;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media(max-width:990px){
+    .religion .religion-box{
+      width: 85%;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media(max-width:720px){
+    .religion .religion-box{
+      width: 85%;
+      margin: 0 auto;
+      display:grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  .religion h2{
+    text-align: left;
+    font-size: 30px;
+    margin: 35px;
+    margin-left: 20px;
+  }
+
+
+  /* comics page using css */
+
+  .comics{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 35px;
+  }
+  .comics h2{
+    text-align: left;
+    font-size: 30px;
+    color: #fff;
+    border-bottom: 2px dashed #fff;
+    margin: 35px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .comics .comics-box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .comics .comics-box .comics-card{
+    width: 250px;
+    height: 420px;
+    text-align: center;
+    padding: 5px;;
+    margin: 10px 20px;
+  }
+  .comics .comics-box .comics-card:hover{
+    box-shadow: 0 0 5px #80800808;
+  }
+  .comics .comics-box .comics-card .comics-img{
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  
+  .comics .comics-box .comics-card .comics-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+  }
+  .comics .comics-box .comics-card:hover .comics-img img{
+    font-size: 20px;
+    margin: 8px 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  }
+  
+  .comics .comics-box .comics-card .comics-tag p{
+    font-size: 15px;
+    margin: 8px 0;
+    color: #fff;
+  }
+  
+  .comics .comics-box .comics-card .comics-tag .comics-icon{
+   color: goldenrod;
+    margin-bottom: 15px;
+  }
+  .comics .comics-box .comics-card .comics-tag .comics-btn{
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    text-decoration: none;
+   border-radius: 10px;
+  }
+  .comics .comics-box .comics-card .comics-tag .comics-btn:hover{
+    color: #fff;
+    background-color: #089d08;
+  }
+
+  /* footer section */
+
+
+  .footer{
+    background-color: white;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+}
+.social-media i{
+  color: #fff;
+    margin: 2rem;
+    padding: 10px;
+    font-size: 50px;
+}
+.bxl-twitter:before {
+  content: "\e982";
+  color: blue;
+}
+.bxl-instagram:before {
+  content: "\e942";
+  color: red;
+}
+.bxl-facebook-circle:before {
+  content: "\e930";
+  color: blue;
+}
